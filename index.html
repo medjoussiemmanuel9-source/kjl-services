@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KJL Nettoyage — Propreté impeccable, service fiable</title>
+  <meta name="description" content="Entreprise de nettoyage résidentiel et commercial. Devis gratuit, service rapide et fiable.">
+  <meta property="og:title" content="KJL Nettoyage — Propreté impeccable, service fiable" />
+  <meta property="og:description" content="Nettoyage résidentiel, commercial, après travaux. Demandez un devis gratuit." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0ea5e9; /* bleu */
+      --primary-600:#0284c7;
+      --accent:#22c55e; /* vert */
+      --dark:#0f172a; /* slate-900 */
+      --muted:#475569; /* slate-600 */
+      --bg:#f8fafc; /* slate-50 */
+      --white:#ffffff;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(2,132,199,.15);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--dark);background:var(--bg)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #e2e8f0}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700}
+    .logo-mark{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#60a5fa);display:grid;place-items:center;box-shadow:var(--shadow)}
+    .logo-mark svg{width:20px;height:20px;fill:#fff}
+    nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+    .cta{background:var(--primary);color:#fff;padding:10px 16px;border-radius:999px;font-weight:600;box-shadow:var(--shadow);border:0;cursor:pointer}
+    .cta:hover{background:var(--primary-600)}
+    .menu-toggle{display:none;border:1px solid #e2e8f0;background:#fff;border-radius:10px;padding:8px}
+    /* Hero */
+    .hero{position:relative;isolation:isolate}
+    .hero .inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:60px 0}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:#e0f2fe;border:1px solid #bae6fd;color:#0369a1;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600}
+    h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:14px 0 12px}
+    .lead{color:var(--muted);font-size:clamp(14px,2vw,18px)}
+    .hero-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
+    .card{background:#fff;border:1px solid #e2e8f0;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .hero-art{position:relative}
+    .circle{aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,#e0f2fe,#fff);border:8px solid #bae6fd;box-shadow:var(--shadow)}
+    .float-badge{position:absolute;right:-6px;bottom:-10px;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:10px 12px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow)}
+    /* Sections */
+    section{padding:56px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:24px}
+    h2{font-size:clamp(22px,3vw,32px);margin:0}
+    .muted{color:var(--muted);font-size:14px}
+    /* Services */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{background:#fff;border:1px solid #e2e8f0;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .service h3{margin:10px 0 6px}
+    .tag{display:inline-block;background:#ecfeff;border:1px solid #cffafe;color:#0e7490;padding:3px 8px;border-radius:999px;font-size:12px;font-weight:600}
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .gallery img{border-radius:12px;border:1px solid #e2e8f0}
+    /* Testimonials */
+    .testis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .testi{background:#fff;border:1px solid #e2e8f0;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .stars{letter-spacing:2px}
+    /* Quote / Contact */
+    .contact-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    form{background:#fff;border:1px solid #e2e8f0;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    label{font-size:13px;font-weight:600;display:block;margin:10px 0 6px}
+    input, textarea, select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:12px;font:inherit}
+    textarea{min-height:120px;resize:vertical}
+    .inline{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .map{background:#fff;border:1px solid #e2e8f0;border-radius:var(--radius);padding:0;overflow:hidden;box-shadow:var(--shadow)}
+    .map iframe{width:100%;height:100%;min-height:360px;border:0}
+    /* Footer */
+    footer{background:#0b1220;color:#e2e8f0;margin-top:40px}
+    .foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;padding:30px 0}
+    .foot a{color:#cbd5e1}
+    .sub{display:flex;gap:12px}
+    .sub input{flex:1}
+    .copyright{border-top:1px dashed #334155;padding:14px 0;color:#94a3b8;font-size:13px}
+    /* Floating call */
+    .float-call{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:12px 16px;box-shadow:var(--shadow);font-weight:700}
+    .float-call:hover{filter:brightness(.95)}
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero .inner{grid-template-columns:1fr}
+      .contact-wrap{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(3,1fr)}
+      .testis{grid-template-columns:repeat(2,1fr)}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      nav ul{display:none;position:absolute;right:20px;top:62px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:12px;flex-direction:column;gap:12px;box-shadow:var(--shadow)}
+      .menu-toggle{display:block}
+    }
+    @media (max-width: 640px){
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .testis,.grid{grid-template-columns:1fr}
+      .inline{grid-template-columns:1fr}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CleaningService",
+    "name":"KJL Nettoyage",
+    "image":"",
+    "url":"",
+    "telephone":"+1 000 000 0000",
+    "areaServed":"Votre ville et environs",
+    "address":{"@type":"PostalAddress","addressLocality":"","addressRegion":"","postalCode":"","streetAddress":""},
+    "priceRange":"$$",
+    "openingHours":"Mo-Fr 08:00-18:00",
+    "servesCuisine":"",
+    "description":"Nettoyage résidentiel et commercial. Devis gratuit. Produits écologiques."
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo" aria-label="Aller à l'accueil">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 1 18 0 9 9 0 0 1-18 0Zm6.5-2.5a2.5 2.5 0 0 0 5 0h2a4.5 4.5 0 1 1-9 0h2Z"/></svg>
+        </span>
+        <span>KJL Services</span>
+      </a>
+      <button class="menu-toggle" aria-label="Ouvrir le menu" id="menuBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <nav>
+        <ul id="mainMenu">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#avis">Avis</a></li>
+          <li><a href="#devis">Devis</a></li>
+          <li><a href="#contact" class="cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container inner">
+        <div>
+          <span class="badge">✨ Propreté garantie • Devis gratuit</span>
+          <h1>Propreté impeccable, <span style="color:var(--primary)">service fiable</span>.</h1>
+          <p class="lead">Nous offrons des services de nettoyage général <strong>résidentiel</strong> et <strong>commercial</strong> avec des produits écologiques et une équipe expérimentée.</p>
+          <div class="hero-cards">
+            <div class="card">
+              <h3>Disponibles 7j/7</h3>
+              <p>Intervention rapide, horaires flexibles, urgences possibles.</p>
+            </div>
+            <div class="card">
+              <h3>Équipe assurée</h3>
+              <p>Professionnels formés, assurés et équipés.</p>
+            </div>
+            <div class="card">
+              <h3>Éco‑responsable</h3>
+              <p>Produits certifiés et pratiques durables.</p>
+            </div>
+            <div class="card">
+              <h3>Devis gratuit</h3>
+              <p>Réponse sous 24h avec estimation claire.</p>
+            </div>
+          </div>
+          <p style="margin-top:20px"><a class="cta" href="#devis">Demander un devis</a></p>
+        </div>
+        <div class="hero-art">
+          <div class="circle" aria-hidden="true"></div>
+          <div class="float-badge" aria-label="Satisfaction clients 4,8 sur 5">
+            <span class="stars">★★★★★</span>
+            <strong>4,8/5</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Nos services de nettoyage</h2>
+          <p class="muted">Résidentiel • Bureaux • Après travaux • Entretien régulier</p>
+        </div>
+        <div class="grid">
+          <article class="service">
+            <span class="tag">Résidentiel</span>
+            <h3>Nettoyage de maisons & appartements</h3>
+            <p class="muted">Entretien hebdo, grand ménage, vitres, cuisines & salles de bain.</p>
+          </article>
+          <article class="service">
+            <span class="tag">Commercial</span>
+            <h3>Bureaux & locaux</h3>
+            <p class="muted">Postes de travail, sols, sanitaires, espaces communs, Vidange des poubelles.</p>
+          </article>
+          <article class="service">
+            <span class="tag">Après travaux</span>
+            <h3>Fin de chantier</h3>
+            <p class="muted">Dépoussiérage complet, vitres, désinfection, remise en état.</p>
+          </article>
+          <article class="service">
+            <span class="tag">Vitres</span>
+            <h3>Vitrerie & enseignes</h3>
+            <p class="muted">Intérieur/extérieur, accès difficiles sur demande.</p>
+          </article>
+          <article class="service">
+            <span class="tag">Poubelles</span>
+            <h3>Shampooing & détachage</h3>
+            <p class="muted">Traitements anti‑acarien, anti‑odeur.</p>
+          </article>
+          <article class="service">
+            <span class="tag">Option</span>
+            <h3>Déneigement (hiver)</h3>
+            <p class="muted">Allées, entrées, escaliers — saisonnier.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galerie">
+      <div class="container">
+        <div class="section-head">
+          <h2>Avant / Après</h2>
+          <p class="muted">Un aperçu de notre travail</p>
+        </div>
+        <div class="gallery" aria-label="Galerie de photos">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop" alt="Nettoyage cuisine — avant">
+          <img src="https://plus.unsplash.com/premium_photo-1663011218145-c1d0c3ba3542?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nettoyage cuisine — après">
+          <img src="https://plus.unsplash.com/premium_photo-1683141120496-f5921a97f5c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nettoyage salle de bain">
+          <img src="https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nettoyage de sols">
+          <img src="https://miragehp.com/wp-content/uploads/2025/05/lavage-conteneur-poubelle-haute-pression-1-1024x536.webp" alt="Désinfection de surface">
+          <img src="https://www.taskrabbit.ca/blog/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/03/2ed95-snow-removal-101_1.jpeg.webp" alt="Entretien de bureau">
+          <img src="https://lechiffonvert.ca/wp-content/uploads/2022/02/choses-a-prevoir-avant-de-faire-appel-a-un-service-dentretien-menager-a-montreal.jpg" alt="Vitres et baies">
+          <img src="https://images.unsplash.com/photo-1642505172378-a6f5e5b15580?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nettoyage de tapis">
+        </div>
+      </div>
+    </section>
+
+    <section id="avis">
+      <div class="container">
+        <div class="section-head">
+          <h2>Avis clients</h2>
+          <p class="muted">La satisfaction au cœur de notre métier</p>
+        </div>
+        <div class="testis">
+          <div class="testi">
+            <div class="stars" aria-label="5 étoiles">★★★★★</div>
+            <p>« Service impeccable, ponctuel et très professionnel. Je recommande ! »</p>
+            <p class="muted">— Nadia B.</p>
+          </div>
+          <div class="testi">
+            <div class="stars" aria-label="5 étoiles">★★★★★</div>
+            <p>« Nos bureaux n'ont jamais été aussi propres. Flexibles sur les horaires. »</p>
+            <p class="muted">— Centre Techno</p>
+          </div>
+          <div class="testi">
+            <div class="stars" aria-label="5 étoiles">★★★★★</div>
+            <p>« Après rénovation, ils ont tout remis en état rapidement. »</p>
+            <p class="muted">— Marc L.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="devis">
+      <div class="container">
+        <div class="section-head">
+          <h2>Demander un devis gratuit</h2>
+          <p class="muted">Réponse sous 24h. Aucun engagement.</p>
+        </div>
+        <div class="contact-wrap">
+          <form id="quoteForm" action="https://formspree.io/f/mwpqjkzg" method="POST">
+  <div class="inline">
+    <div>
+      <label for="name">Nom complet</label>
+      <input id="name" name="name" placeholder="Ex. Jean Dupont" required />
+    </div>
+    <div>
+      <label for="phone">Téléphone</label>
+      <input id="phone" name="phone" type="tel" placeholder="Ex. 514-000-0000" required />
+    </div>
+  </div>
+  <div class="inline">
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="vous@exemple.com" required />
+    </div>
+    <div>
+      <label for="service">Type de service</label>
+      <select id="service" name="service">
+        <option>Résidentiel</option>
+        <option>Commercial</option>
+        <option>Après travaux</option>
+        <option>Vitres</option>
+        <option>Lavage poubelles</option>
+      </select>
+    </div>
+  </div>
+  <label for="message">Détails</label>
+  <textarea id="message" name="message" placeholder="Adresse, superficie, fréquence, préférences horaires..."></textarea>
+  <div style="display:flex;gap:10px;align-items:center;margin-top:12px">
+    <button class="cta" type="submit">Envoyer la demande</button>
+  </div>
+</form>
+
+          <div class="map">
+            <!-- Remplacez par votre carte Google Maps -->
+            <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.5668239677583!2d-73.567!3d45.5017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDUuNTAxNywgLTczLjU2Nw!5e0!3m2!1sfr!2sca!4v1712512345678"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="muted">Parlez-nous de votre besoin</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h3>Téléphone</h3>
+            <p><a href="tel:+1(819)576-2782"> +1(819)576-2782 </a></p>
+            <p class="muted">Du lundi au Dimanche, 24/24</p>
+          </div>
+          <div class="card">
+            <h3>Email</h3>
+            <p><a href="mailto:kjlservices3@gmail.com">kjlservices3@gmail.com</a></p>
+            <p class="muted">Réponse rapide</p>
+          </div>
+          <div class="card">
+            <h3>Zone desservie</h3>
+            <p>Votre ville et environs</p>
+            <p class="muted">Interventions ponctuelles hors zone sur devis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>
+        <div class="logo" style="margin-bottom:10px">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 1 18 0 9 9 0 0 1-18 0Zm6.5-2.5a2.5 2.5 0 0 0 5 0h2a4.5 4.5 0 1 1-9 0h2Z"/></svg>
+          </span>
+          <span>KJL Services</span>
+        </div>
+        <p class="muted">Entreprise de nettoyage résidentiel et commercial. Produits écologiques, équipe professionnelle, satisfaction garantie.</p>
+      </div>
+      <div>
+        <h3>Liens</h3>
+        <p><a href="#services">Services</a></p>
+        <p><a href="#devis">Devis</a></p>
+        <p><a href="#contact">Contact</a></p>
+      </div>
+      <div>
+        <h3>Newsletter</h3>
+        <p class="muted">Recevez nos promotions saisonnières.</p>
+        <div class="sub">
+          <input type="email" placeholder="Votre email" aria-label="Votre email" />
+          <button class="cta" type="button">S'inscrire</button>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">
+      © <span id="year"></span> KJL Nettoyage • Tous droits réservés • <a href="#">Mentions légales</a>
+    </div>
+  </footer>
+
+  <a class="float-call" href="tel:+1(819)576-2782" aria-label="Appeler maintenant">📞 Appeler</a>
+
+  <script>
+    // Burger menu (mobile)
+    const menuBtn = document.getElementById('menuBtn');
+    const mainMenu = document.getElementById('mainMenu');
+    menuBtn?.addEventListener('click', ()=>{
+      const isOpen = getComputedStyle(mainMenu).display !== 'none';
+      mainMenu.style.display = isOpen ? 'none' : 'flex';
+    });
+
+    // Smooth scroll for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        const target = document.querySelector(id);
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+          if(window.innerWidth < 980){ mainMenu.style.display='none'; }
+        }
+      })
+    })
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    
+  </script>
+</body>
+</html>
